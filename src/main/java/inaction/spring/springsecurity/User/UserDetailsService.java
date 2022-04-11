@@ -1,4 +1,4 @@
-package inaction.spring.springsecurity.services;
+package inaction.spring.springsecurity.User;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

@@ -1,4 +1,4 @@
-package inaction.spring.springsecurity.Users;
+package inaction.spring.springsecurity.User;
 
 import lombok.*;
 import org.hibernate.Hibernate;
@@ -9,7 +9,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.io.Serial;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
