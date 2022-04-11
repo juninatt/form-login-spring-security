@@ -19,7 +19,7 @@ import java.util.Objects;
 @ToString
 @NoArgsConstructor(force=true)
 @RequiredArgsConstructor
-public class User implements UserDetails {
+public class AppUser implements UserDetails {
 
     private static final long serialVersionUID = 1L;
 
@@ -69,8 +69,8 @@ public class User implements UserDetails {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        User user = (User) o;
-        return id != null && Objects.equals(id, user.id);
+        AppUser appUser = (AppUser) o;
+        return id != null && Objects.equals(id, appUser.id);
     }
 
     @Override
