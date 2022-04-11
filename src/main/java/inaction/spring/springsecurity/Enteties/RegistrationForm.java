@@ -1,12 +1,13 @@
-package inaction.spring.springsecurity;
+package inaction.spring.springsecurity.Enteties;
 
 
-import inaction.spring.springsecurity.User.AppUser;
+import inaction.spring.springsecurity.Enteties.AppUser;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import lombok.Data;
 
 @Data
 public class RegistrationForm {
+
     private String username;
     private String password;
     private String fullname;

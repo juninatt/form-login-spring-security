@@ -1,7 +1,7 @@
 package inaction.spring.springsecurity.Controllers;
 
-import inaction.spring.springsecurity.RegistrationForm;
-import inaction.spring.springsecurity.User.UserRepository;
+import inaction.spring.springsecurity.Enteties.RegistrationForm;
+import inaction.spring.springsecurity.Repositories.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +14,7 @@ public class RegistrationController {
 
     private UserRepository userRepo;
     private PasswordEncoder passwordEncoder;
+
     public RegistrationController(
             UserRepository userRepo, PasswordEncoder passwordEncoder) {
         this.userRepo = userRepo;
