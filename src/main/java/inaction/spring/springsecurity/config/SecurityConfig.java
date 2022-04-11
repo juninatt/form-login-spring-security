@@ -1,7 +1,7 @@
 package inaction.spring.springsecurity.config;
 
-import inaction.spring.springsecurity.User.AppUser;
-import inaction.spring.springsecurity.User.UserRepository;
+import inaction.spring.springsecurity.Enteties.AppUser;
+import inaction.spring.springsecurity.Repositories.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -32,8 +32,11 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeRequests()
-                .antMatchers("/register").access("hasRole('USER')")
+                .antMatchers("/home").access("hasRole('USER')")
                 .antMatchers("/", "/**").access("permitAll()")
+                .and()
+                .formLogin()
+                .loginPage("/login")
                 .and()
                 .build();
     }
