@@ -32,12 +32,17 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeRequests()
-                .antMatchers("/home").access("hasRole('USER')")
-                .antMatchers("/", "/**").access("permitAll()")
+                    .antMatchers("/home").access("hasRole('USER')")
+                    .antMatchers("/", "/**").access("permitAll()")
                 .and()
-                .formLogin()
-                .loginPage("/login")
+                    .formLogin()
+                        .loginPage("/login")
+                        .defaultSuccessUrl("/home", true)
                 .and()
-                .build();
+                    .logout()
+                    .logoutSuccessUrl("/")
+
+                .and()
+                    .build();
     }
 }
