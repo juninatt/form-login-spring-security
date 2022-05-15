@@ -1,4 +1,4 @@
-package inaction.spring.springsecurity;
+package spring.springsecurity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

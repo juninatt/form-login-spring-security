@@ -1,4 +1,4 @@
-package inaction.spring.springsecurity.config;
+package spring.springsecurity.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

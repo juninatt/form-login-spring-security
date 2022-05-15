@@ -1,4 +1,4 @@
-package inaction.spring.springsecurity.controllers;
+package spring.springsecurity.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

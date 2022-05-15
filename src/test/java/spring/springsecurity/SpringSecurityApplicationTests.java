@@ -1,4 +1,4 @@
-package inaction.spring.springsecurity;
+package spring.springsecurity;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

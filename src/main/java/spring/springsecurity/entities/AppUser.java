@@ -1,4 +1,4 @@
-package inaction.spring.springsecurity.entities;
+package spring.springsecurity.entities;
 
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;

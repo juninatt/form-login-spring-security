@@ -1,6 +1,6 @@
-package inaction.spring.springsecurity.repositories;
+package spring.springsecurity.repositories;
 
-import inaction.spring.springsecurity.entities.AppUser;
+import spring.springsecurity.entities.AppUser;
 import org.springframework.data.repository.CrudRepository;
 
 /**

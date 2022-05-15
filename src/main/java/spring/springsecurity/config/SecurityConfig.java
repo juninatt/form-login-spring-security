@@ -1,9 +1,9 @@
-package inaction.spring.springsecurity.config;
+package spring.springsecurity.config;
 
-import inaction.spring.springsecurity.entities.AppUser;
-import inaction.spring.springsecurity.handlers.CustomAuthenticationFailureHandler;
-import inaction.spring.springsecurity.handlers.CustomAuthenticationSuccessHandler;
-import inaction.spring.springsecurity.repositories.UserRepository;
+import spring.springsecurity.entities.AppUser;
+import spring.springsecurity.handlers.CustomAuthenticationFailureHandler;
+import spring.springsecurity.handlers.CustomAuthenticationSuccessHandler;
+import spring.springsecurity.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

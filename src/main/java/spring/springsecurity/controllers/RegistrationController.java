@@ -1,7 +1,7 @@
-package inaction.spring.springsecurity.controllers;
+package spring.springsecurity.controllers;
 
-import inaction.spring.springsecurity.entities.RegistrationForm;
-import inaction.spring.springsecurity.repositories.UserRepository;
+import spring.springsecurity.entities.RegistrationForm;
+import spring.springsecurity.repositories.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
