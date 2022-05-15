@@ -1,7 +1,6 @@
-package inaction.spring.springsecurity.Enteties;
+package inaction.spring.springsecurity.entities;
 
 import lombok.*;
-import org.hibernate.Hibernate;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,8 +11,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Objects;
 
+/**
+ * The entity that represent the app user. Stores security and contact information.
+ * @see UserDetails
+ */
 @Entity
 @Getter
 @Setter
@@ -24,12 +26,27 @@ public class AppUser implements UserDetails {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * Automatically generated id value.
+     */
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
+    /**
+     * The value used to find the user in the database for security purposes.
+     */
     private final String username;
+
+    /**
+     * Stores the user password which is used to log in.
+     */
     private final String password;
+
+
+    /**
+     * User contact information
+     */
     private final String fullname;
     private final String street;
     private final String city;
@@ -37,14 +54,9 @@ public class AppUser implements UserDetails {
     private final String zip;
     private final String phoneNumber;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
+    /**
+     * @return Returns the authority 'ROLE_USER' inside a collection.
+     */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
@@ -64,18 +76,5 @@ public class AppUser implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        AppUser appUser = (AppUser) o;
-        return id != null && Objects.equals(id, appUser.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return getClass().hashCode();
     }
 }

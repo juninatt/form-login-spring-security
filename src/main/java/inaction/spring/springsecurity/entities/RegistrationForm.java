@@ -1,10 +1,12 @@
-package inaction.spring.springsecurity.Enteties;
+package inaction.spring.springsecurity.entities;
 
 
-import inaction.spring.springsecurity.Enteties.AppUser;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import lombok.Data;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
+/**
+ * A class representing the registration form for registering users.
+ */
 @Data
 public class RegistrationForm {
 
@@ -17,6 +19,11 @@ public class RegistrationForm {
     private String zip;
     private String phone;
 
+
+    /**
+     * Method that takes the information from the register form
+     * and creates a new user after encoding the password.
+     */
     public AppUser toUser(PasswordEncoder passwordEncoder) {
         return new AppUser(
                 username, passwordEncoder.encode(password),
