@@ -2,15 +2,22 @@
 <html xmlns="http:/ /www.w3.org/1999/xhtml"
       xmlns:th="http:/ /www.thymeleaf.org">
 <head>
+  <style>
+    h1 {text-align: center;}
+    form {text-align: center;}
+    .aligncenter {text-align: center}
+  </style>
   <title>NOTEBOOK</title>
 </head>
 <body>
 <h1>Login</h1>
-<img class="img img-circle" width="400" height="400" th:src="@{/images/ana.jpg}"/>
+<p class="aligncenter">
+<img class="img img-circle" width="400" height="500" th:src="@{login.jpg}" alt="centered image"/>
+</p>
 <div th:if="${error}">
   Unable to login. Check your username and password.
 </div>
-<p>New here? Click
+<p class="aligncenter">New here? Click
   <a th:href="@{/register}">here</a> to register.</p>
 <form method="POST" th:action="@{/login}" id="loginForm">
   <label for="username">Username: </label>

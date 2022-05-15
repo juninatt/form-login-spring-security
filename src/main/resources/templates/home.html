@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html xmlns="http:/ /www.w3.org/1999/xhtml"
       xmlns:th="http:/ /www.thymeleaf.org">
+<style>
+    h1 {text-align: center;}
+    form {text-align: center;}
+    .aligncenter {text-align: center}
+</style>
 <head>
     <title>notebook</title>
 </head>
 
 <body>
 <h1>Welcome to NOTEBOOK</h1>
-<img class="img img-circle" width="400" height="400" th:src="@{/images/ana.jpg}"/>
+<p class="aligncenter">
+<img class= width="1000" height="800" th:src="@{home.jpg}"/>
+</p>
 </body>
 <form method="POST" th:action="@{/logout}">
     <input type="submit" value="Logout"/>
